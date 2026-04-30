@@ -187,6 +187,11 @@ h1, h2, h3, h4 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.navbar.menu-open {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+}
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -597,17 +602,18 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         position: absolute;
-        top: 100%;
+        top: 0;
         left: 0;
         width: 100%;
         background: rgba(15, 23, 42, 0.95);
         backdrop-filter: blur(10px);
         flex-direction: column;
-        padding: 2rem 0;
+        padding: 6rem 0 2rem 0;
         gap: 1.5rem;
         border-bottom: 1px solid rgba(255,255,255,0.05);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: var(--transition);
+        z-index: -1;
     }
     .nav-links.nav-active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
