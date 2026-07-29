@@ -1,59 +1,97 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Navigation Toggle
-    const burger = document.querySelector('.mobile-menu-btn');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li a');
-    const navbar = document.querySelector('.navbar');
+    const header = document.getElementById('site-header');
+    const navToggle = document.getElementById('nav-toggle');
+    const navigation = document.getElementById('primary-navigation');
+    const navLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-    burger.addEventListener('click', () => {
-        // Toggle Nav
-        nav.classList.toggle('nav-active');
-        // Burger Animation
-        burger.classList.toggle('toggle');
-        // Navbar background
-        navbar.classList.toggle('menu-open');
-    });
+    const setMenuState = (open, { returnFocus = false } = {}) => {
+        if (!header || !navToggle) return;
 
-    // Close mobile menu on link click
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (nav.classList.contains('nav-active')) {
-                nav.classList.remove('nav-active');
-                burger.classList.remove('toggle');
-                navbar.classList.remove('menu-open');
+        header.classList.toggle('menu-open', open);
+        document.body.classList.toggle('nav-open', open);
+        navToggle.setAttribute('aria-expanded', String(open));
+        navToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+
+        if (returnFocus) navToggle.focus();
+    };
+
+    if (header && navToggle && navigation) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+            setMenuState(!isOpen);
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', () => setMenuState(false));
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+                setMenuState(false, { returnFocus: true });
             }
         });
-    });
 
-    // 2. Navbar shrink on scroll
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 780) setMenuState(false);
+        });
+    }
 
-    // 3. Scroll Reveal Animation
+    const updateHeader = () => {
+        if (header) header.classList.toggle('scrolled', window.scrollY > 24);
+    };
+
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+
     const revealElements = document.querySelectorAll('.reveal');
-    
-    const revealCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Reveal only once
-            }
+
+    if (reducedMotion.matches || !('IntersectionObserver' in window)) {
+        revealElements.forEach((element) => element.classList.add('is-visible'));
+    } else {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -48px 0px'
         });
-    };
 
-    const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    };
+        revealElements.forEach((element) => revealObserver.observe(element));
+    }
 
-    const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+    if ('IntersectionObserver' in window && navLinks.length) {
+        const sections = navLinks
+            .map((link) => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);
 
-    revealElements.forEach(el => {
-        revealObserver.observe(el);
-    });
+        const sectionObserver = new IntersectionObserver((entries) => {
+            const visible = entries
+                .filter((entry) => entry.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+            if (!visible) return;
+
+            navLinks.forEach((link) => {
+                const isCurrent = link.getAttribute('href') === `#${visible.target.id}`;
+                if (isCurrent) {
+                    link.setAttribute('aria-current', 'true');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+        }, {
+            rootMargin: '-25% 0px -62% 0px',
+            threshold: [0, 0.1, 0.5]
+        });
+
+        sections.forEach((section) => sectionObserver.observe(section));
+    }
+
+    const year = document.getElementById('current-year');
+    if (year) year.textContent = String(new Date().getFullYear());
 });

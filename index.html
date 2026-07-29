@@ -1,285 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-CA">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cesar Peralta | Software & Data Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Cesar Peralta | Applied AI &amp; Data Engineering</title>
+    <meta name="description" content="McGill Computer Science (AI) student and Clinical Data Engineer building local AI agents, RAG systems, NLP pipelines, and reliable data workflows. Seeking Summer 2027 internships.">
+    <meta name="author" content="Cesar Peralta">
+    <meta name="theme-color" content="#08141f">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="canonical" href="https://capver.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:url" content="https://capver.github.io/">
+    <meta property="og:title" content="Cesar Peralta | Applied AI &amp; Data Engineering">
+    <meta property="og:description" content="Clinical Data Engineer and McGill CS (AI) student building reliable applied-AI, data, and backend systems.">
+    <meta property="og:image" content="https://capver.github.io/assets/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Cesar Peralta — Applied AI and Data Engineering, McGill Computer Science (AI)">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cesar Peralta | Applied AI &amp; Data Engineering">
+    <meta name="twitter:description" content="Clinical Data Engineer and McGill CS (AI) student building reliable applied-AI, data, and backend systems.">
+    <meta name="twitter:image" content="https://capver.github.io/assets/og.png">
+    <meta name="twitter:image:alt" content="Cesar Peralta — Applied AI and Data Engineering, McGill Computer Science (AI)">
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
-
 <body>
-    <!-- Background Elements -->
-    <div class="bg-glow blob-1"></div>
-    <div class="bg-glow blob-2"></div>
-
-    <header class="navbar">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" id="site-header">
         <div class="nav-container">
-            <a href="#" class="logo">CP<span class="accent">.</span></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
+            <a href="#top" class="logo" aria-label="CP. — Cesar Peralta home">CP<span aria-hidden="true">.</span></a>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+            <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="#work">Work</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact" class="btn-primary-outline">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a class="nav-resume" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Résumé <span aria-hidden="true">↗</span></a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-btn">
-                <span></span><span></span><span></span>
-            </div>
         </div>
     </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="container hero-content">
-                <div class="hero-text reveal">
-                    <p class="greeting">Hi, my name is</p>
-                    <h1 class="main-title">Cesar Peralta</h1>
-                    <h2 class="sub-title">Architecting <span class="accent">Data Pipelines</span> & <span
-                            class="accent">AI Solutions</span></h2>
-                    <p class="hero-desc">
-                        A certified medical technologist transitioning into Computer Science & Artificial Intelligence.
-                        I build data pipelines, automate workflows, and develop innovative solutions.
-                    </p>
-                    <div class="btn-group">
-                        <a href="#experience" class="btn-primary">View My Work</a>
-                        <a href="assets/resume.pdf" target="_blank" class="btn-primary">Download Resume</a>
+    <main id="main-content">
+        <section class="hero" id="top" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">McGill Computer Science (AI) <span aria-hidden="true">·</span> Montréal</p>
+                    <h1 id="hero-title">I build reliable <span>AI and data systems</span> for high-stakes workflows.</h1>
+                    <p class="hero-summary">I’m a Clinical Data Engineer and undergraduate researcher combining healthcare rigor with hands-on work in local AI agents, RAG, NLP, data pipelines, and backend systems.</p>
+                    <p class="availability"><span aria-hidden="true"></span> Seeking Summer 2027 internships</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#work">Explore selected work</a>
+                        <a class="button button-secondary" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">View résumé <span aria-hidden="true">↗</span></a>
                     </div>
-                </div>
-                <div class="hero-image-wrapper reveal delay-1">
-                    <img src="assets/profile.png" alt="Cesar Peralta" class="hero-image">
-                    <div class="image-backdrop"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title reveal">About <span class="accent">Me</span></h2>
-                <div class="about-grid reveal">
-                    <div class="about-text glass-card">
-                        <p>Hello! I'm Cesar. I am currently pursuing a B.Sc. in Computer Science in Artificial
-                            Intelligence at McGill University.</p>
-                        <p>My journey is unique: I started as a certified medical technologist. Working as a QC
-                            reviewer, lead scientist and clinical research coordinator, I dealt firsthand with the
-                            friction of
-                            managing vast amounts of highly sensitive, complex data. Recognizing the massive gap between
-                            raw data collection and efficient,
-                            automated workflows naturally drew me into the world of programming.</p>
-                        <p>Today, I treat software development with that same rigorous, analytical mindset.
-                            I leverage my advanced Python skills and practical problem-solving approach to
-                            architect robust ETL pipelines, ensure data integrity, and engineer the intelligent
-                            infrastructure
-                            that solves high-stakes problems across any industry.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title reveal">Technical <span class="accent">Skills</span></h2>
-                <div class="skills-container glass-card reveal">
-                    <div class="skill-category">
-                        <h3>Languages</h3>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Java</span>
-                            <span class="tag">C</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools & Technologies</h3>
-                        <div class="tags">
-                            <span class="tag">Git</span>
-                            <span class="tag">LaTeX</span>
-                            <span class="tag">REDCap API</span>
-                            <span class="tag">Gemini API</span>
-                            <span class="tag">ETL Pipelines</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Domain Expertise</h3>
-                        <div class="tags">
-                            <span class="tag">Clinical Research</span>
-                            <span class="tag">Data Management</span>
-                            <span class="tag">Laboratory Operations</span>
-                            <span class="tag">ICH GCP / GLP</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title reveal">Professional <span class="accent">Experience</span></h2>
-                <div class="timeline">
-                    <!-- Job 1 -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card hover-glow">
-                            <span class="timeline-date">March 2024 – Present</span>
-                            <h3>Clinical Research Coordinator</h3>
-                            <h4>Lady Davis Institute</h4>
-                            <ul class="job-duties">
-                                <li>Developed a Python-based automation suite utilizing the REDCap API to batch-upload
-                                    patient records, reducing manual data entry time by 65%.</li>
-                                <li>Engineered ETL pipelines in Python to extract diagnostic data,
-                                    transforming raw outputs into research-ready formats.</li>
-                                <li>Built data-cleaning and anonymization scripts to resolve naming conflicts and ensure
-                                    compliance.</li>
-                                <li>Automated clinical report generation using Python, increasing efficiency by 35%.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Job 2 -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card hover-glow">
-                            <span class="timeline-date">Sept 2022 – March 2024</span>
-                            <h3>Laboratory Technician & QC Reviewer</h3>
-                            <h4>CellCarta</h4>
-                            <ul class="job-duties">
-                                <li>Designated as Lead Scientist for a major clinical trial based on exceptional
-                                    competency in data management systems.</li>
-                                <li>Optimized laboratory throughput, maintaining operational speeds 60%
-                                    faster than the site average.</li>
-                                <li>Cleared 40% of a critical Quality Control backlog to meet clinical study timelines.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Job 3 -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content glass-card hover-glow">
-                            <span class="timeline-date">July 2022 – Sept 2022</span>
-                            <h3>Blood Bank Medical Technologist</h3>
-                            <h4>McGill University Health Centre (MUHC)</h4>
-                            <ul class="job-duties">
-                                <li>Primary operator for External Quality Control testing based on a consistent record
-                                    of diagnostic accuracy.</li>
-                                <li>Managed high-volume diagnostic workflows, accurately processing 100+ clinical
-                                    samples daily.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title reveal">Selected <span class="accent">Projects</span></h2>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card glass-card hover-glow reveal">
-                        <div class="project-content">
-                            <h3>Flashpedia</h3>
-                            <p class="project-desc">A specialized CRUD web application engineered for structured active
-                                recall. Eliminates friction by organizing data strictly around Course and Lecture
-                                parameters.</p>
-                            <div class="tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Flask</span>
-                                <span class="tag">SQLite3</span>
-                                <span class="tag">JavaScript</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Capver/Flashpedia" target="_blank"
-                                    class="btn-primary-outline btn-sm">GitHub Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="project-card glass-card hover-glow reveal delay-1">
-                        <div class="project-content">
-                            <h3>Cesar's PDF Tool</h3>
-                            <p class="project-desc">A robust CLI application engineered for automated document
-                                manipulation. Features a dual-input design for rapid pipeline integration or interactive
-                                prompts.</p>
-                            <div class="tags">
-                                <span class="tag">Python 3</span>
-                                <span class="tag">pypdf</span>
-                                <span class="tag">pytest</span>
-                                <span class="tag">CLI</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Capver/Cesar-PDF-Tool" target="_blank"
-                                    class="btn-primary-outline btn-sm">GitHub Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section">
-            <div class="container">
-                <h2 class="section-title reveal">Education & <span class="accent">Certifications</span></h2>
-                <div class="edu-grid">
-                    <div class="edu-card glass-card hover-glow reveal">
-                        <h3>B.Sc., Computer Science for Artificial Intelligence</h3>
-                        <h4>McGill University</h4>
-                        <span class="edu-date">Aug 2025 – Apr 2028 (expected)</span>
-                    </div>
-                    <div class="edu-card glass-card hover-glow reveal delay-1">
-                        <h3>Diploma of College Studies (DEC)</h3>
-                        <h4>Dawson College</h4>
-                        <p class="edu-desc">Biomedical Laboratory Technology</p>
-                        <span class="edu-date">Aug 2019 – May 2022</span>
-                    </div>
-                </div>
-                <div class="certifications reveal">
-                    <h3 class="subsection-title">Certifications</h3>
-                    <ul class="cert-list hover-glow">
-                        <li>Professional Certificate for Python Programming (HarvardX)</li>
-                        <li>Microsoft Office Certified Specialist (PowerPoint, Excel, Word, Access)</li>
+                    <ul class="hero-links" aria-label="Profiles and contact">
+                        <li><a href="https://github.com/Capver" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/cesar-peralta-b710a91b1/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+                        <li><a href="mailto:cesaralexperalta@gmail.com">Email</a></li>
                     </ul>
                 </div>
+                <div class="portrait-wrap reveal" aria-label="Portrait of Cesar Peralta">
+                    <div class="portrait-frame">
+                        <picture>
+                            <source srcset="assets/profile.webp" type="image/webp">
+                            <img src="assets/profile.png" alt="Portrait of Cesar Peralta" width="800" height="800" fetchpriority="high">
+                        </picture>
+                    </div>
+                    <div class="portrait-caption"><span>Current role</span><strong>Clinical Data Engineer</strong></div>
+                </div>
+            </div>
+            <div class="container proof-wrap reveal" aria-label="Selected outcomes">
+                <ul class="proof-grid">
+                    <li><strong>90%</strong><span>of a 7-hour weekly workflow automated</span></li>
+                    <li><strong>20/20 × 2</strong><span>clinical-agent benchmark runs</span></li>
+                    <li><strong>90</strong><span>protein-interaction experiments</span></li>
+                    <li><strong>2+ years</strong><span>building Python automation and pipelines</span></li>
+                </ul>
             </div>
         </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container contact-container reveal">
-                <h2 class="section-title">Contact <span class="accent">Me</span></h2>
-                <p class="contact-text">I'm currently looking for new opportunities to apply my programming and data
-                    skills. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-                <div class="contact-links">
-                    <a href="mailto:cesaralexperalta@gmail.com" class="btn-primary">Say Hello</a>
-                    <a href="https://www.linkedin.com/in/cesar-peralta-b710a91b1/" target="_blank"
-                        class="btn-primary">LinkedIn Profile</a>
-                    <a href="https://github.com/Capver" target="_blank" class="btn-primary">GitHub Profile</a>
+        <section class="section" id="work" aria-labelledby="work-title">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Selected work</p>
+                    <h2 id="work-title">Evidence, not just keywords.</h2>
+                    <p>Four recent projects showing how I design, test, and explain systems across applied AI, data engineering, and machine-learning research.</p>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card reveal">
+                        <div class="project-topline"><span>Local AI agent</span><span>2026</span></div>
+                        <h3>MCP Clinical Agent</h3>
+                        <p class="project-lead">A local agent that turns natural-language clinical questions into PostgreSQL analysis, supports follow-ups, recovers from SQL errors, and exports results.</p>
+                        <ul class="project-results">
+                            <li><strong>20/20</strong> on two consecutive end-to-end benchmark runs</li>
+                            <li>A restricted PostgreSQL role keeps model queries read-only</li>
+                        </ul>
+                        <ul class="tag-list" aria-label="Technologies used"><li>Python</li><li>LangGraph</li><li>FastMCP</li><li>PostgreSQL</li><li>Ollama</li><li>Docker</li></ul>
+                        <a class="project-link" href="https://github.com/Capver/mcp-clinical-agent" target="_blank" rel="noopener noreferrer">View code &amp; benchmark <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-topline"><span>Retrieval-augmented generation</span><span>2026</span></div>
+                        <h3>RAG Loremaster</h3>
+                        <p class="project-lead">A framework-free RAG system that crawls MediaWiki sites, retrieves parent context through child embeddings, and streams answers with inline citations.</p>
+                        <ul class="project-results">
+                            <li><strong>4,701 pages</strong> indexed into 86,784 vectors</li>
+                            <li><strong>17/21</strong> answers accurate and well-sourced in manual evaluation</li>
+                        </ul>
+                        <ul class="tag-list" aria-label="Technologies used"><li>Python</li><li>ChromaDB</li><li>Ollama</li><li>Gemini API</li><li>Docker</li></ul>
+                        <a class="project-link" href="https://github.com/Capver/RAG_loremaster" target="_blank" rel="noopener noreferrer">Explore the RAG pipeline <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-topline"><span>Clinical NLP</span><span>2026</span></div>
+                        <h3>Clinical Medication Parser</h3>
+                        <p class="project-lead">A two-pass local-LLM pipeline that finds medication mentions, classifies their clinical status, and returns evidence-anchored structured data.</p>
+                        <ul class="project-results">
+                            <li><strong>~87%</strong> case-level quality across a 30-case manual review</li>
+                            <li>Pydantic schemas, retries, and source-text clues constrain output</li>
+                        </ul>
+                        <ul class="tag-list" aria-label="Technologies used"><li>Python</li><li>Ollama</li><li>Qwen 2.5</li><li>Pydantic</li><li>pandas</li></ul>
+                        <a class="project-link" href="https://github.com/Capver/clinical-medication-parser" target="_blank" rel="noopener noreferrer">View parser &amp; evaluation <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card project-card-research reveal">
+                        <div class="project-topline"><span>Undergraduate research</span><span>COMP 396</span></div>
+                        <h3>Data Biases in Protein Language Models</h3>
+                        <p class="project-lead">An ablation study testing whether a reported 65% protein-interaction prediction ceiling came from model limits or from data-generation choices.</p>
+                        <ul class="project-results">
+                            <li><strong>13 dataset variants</strong> and 90 repeated compute-cluster experiments</li>
+                            <li>Reproduced 64.9%; confidence filtering raised STRING accuracy from <strong>63.6% to 75.4%</strong></li>
+                        </ul>
+                        <ul class="tag-list" aria-label="Technologies used"><li>Python</li><li>Protein LMs</li><li>HPC</li><li>Git worktrees</li><li>MMseqs2</li></ul>
+                        <a class="project-link" href="https://github.com/Capver/COMP-396-public" target="_blank" rel="noopener noreferrer">View code &amp; reproducibility materials <span aria-hidden="true">↗</span></a>
+                    </article>
+                </div>
+                <div class="earlier-work reveal">
+                    <div><p class="eyebrow">Earlier work</p><h3>Foundational projects</h3></div>
+                    <article>
+                        <div><h4>Flashpedia</h4><p>Flask and SQLite CRUD app for course- and lecture-based active recall.</p></div>
+                        <div class="compact-links"><a href="https://github.com/Capver/Flashpedia" target="_blank" rel="noopener noreferrer">Repository <span aria-hidden="true">↗</span></a><a href="https://youtu.be/yNDL3Ts6V1w" target="_blank" rel="noopener noreferrer">Video demo <span aria-hidden="true">↗</span></a></div>
+                    </article>
+                    <article>
+                        <div><h4>Cesar’s PDF Tool</h4><p>Tested Python CLI for repeatable PDF extraction, slicing, insertion, and joining.</p></div>
+                        <div class="compact-links"><a href="https://github.com/Capver/Cesar-PDF-Tool" target="_blank" rel="noopener noreferrer">Repository <span aria-hidden="true">↗</span></a><a href="https://youtu.be/zyy5se-FExw" target="_blank" rel="noopener noreferrer">Video demo <span aria-hidden="true">↗</span></a></div>
+                    </article>
                 </div>
             </div>
         </section>
+        <section class="section section-muted" id="experience" aria-labelledby="experience-title">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Experience</p>
+                    <h2 id="experience-title">Engineering informed by real clinical workflows.</h2>
+                    <p>I started in medical laboratories and clinical research. That experience now shapes how I think about reliability, privacy, data quality, and the people who depend on a system.</p>
+                </div>
+                <div class="experience-list">
+                    <article class="experience-item reveal">
+                        <div class="experience-meta"><span>Aug 2025 – Present</span><span>Montréal, QC</span></div>
+                        <div class="experience-content"><h3>Clinical Data Engineer</h3><p class="organization">Lady Davis Institute for Medical Research</p>
+                            <ul><li>Automated approximately 90% of a diabetic-retinopathy image workflow that previously required about seven hours each week, including UI control, validation, exports, and PDF reports.</li><li>Built rule-based patient email automation that reduced preparation from 2–3 minutes per patient to about one second while reducing manual errors.</li><li>Refactored clinical pipelines for speed and maintainability, adding standardized cleaning and privacy safeguards.</li></ul>
+                        </div>
+                    </article>
+                    <article class="experience-item reveal">
+                        <div class="experience-meta"><span>May 2026 – Jul 2026</span><span>Montréal, QC</span></div>
+                        <div class="experience-content"><h3>Undergraduate Researcher</h3><p class="organization">McGill School of Computer Science</p>
+                            <ul><li>Reproduced a published protein-interaction benchmark, establishing a 64.9% baseline before evaluating data-quality and preprocessing changes.</li><li>Ran 13 dataset variants and 90 repeated cluster experiments; filtering low-confidence STRING examples raised accuracy from 63.6% to 75.4%.</li><li>Built scalable preprocessing and leakage checks across two datasets, coordinating parallel work with Git branches and worktrees.</li></ul>
+                        </div>
+                    </article>
+                    <article class="experience-item reveal">
+                        <div class="experience-meta"><span>Mar 2024 – Aug 2025</span><span>Montréal, QC</span></div>
+                        <div class="experience-content"><h3>Clinical Research Coordinator</h3><p class="organization">Lady Davis Institute for Medical Research</p>
+                            <ul><li>Built Python and REDCap pipelines for batch patient uploads and converting imaging outputs into research-ready clinical datasets.</li><li>Created cleaning and anonymization scripts that resolved CSV naming conflicts and enforced privacy-conscious researcher access.</li><li>Led recruitment for 600+ patients at a 50% higher daily rate than the team average while maintaining 800+ high-integrity patient files.</li></ul>
+                        </div>
+                    </article>
+                </div>
+                <div class="earlier-roles reveal" aria-labelledby="earlier-roles-title">
+                    <h3 id="earlier-roles-title">Earlier clinical experience</h3>
+                    <div><p><strong>Laboratory Technician &amp; QC Reviewer</strong><br>CellCarta</p><span>Sep 2022 – Mar 2024</span></div>
+                    <div><p><strong>Blood Bank Medical Technologist</strong><br>McGill University Health Centre</p><span>Jul 2022 – Sep 2022</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="capabilities" aria-labelledby="capabilities-title">
+            <div class="container">
+                <div class="section-heading reveal"><p class="eyebrow">Technical capabilities</p><h2 id="capabilities-title">Tools selected for the problem.</h2><p>I’m strongest in Python systems that connect models, data stores, APIs, and operational workflows.</p></div>
+                <div class="capability-grid">
+                    <article class="capability-card reveal"><span class="capability-number">01</span><h3>Programming &amp; data</h3><ul class="tag-list"><li>Python</li><li>SQL</li><li>Java</li><li>C</li><li>pandas</li><li>Pydantic</li><li>ETL</li><li>REST / REDCap APIs</li><li>CSV / JSON</li></ul></article>
+                    <article class="capability-card reveal"><span class="capability-number">02</span><h3>Applied AI &amp; ML</h3><ul class="tag-list"><li>RAG</li><li>LLM agents</li><li>NLP</li><li>Embeddings</li><li>Protein language models</li><li>LangGraph</li><li>MCP / FastMCP</li><li>Ollama</li></ul></article>
+                    <article class="capability-card reveal"><span class="capability-number">03</span><h3>Systems &amp; platforms</h3><ul class="tag-list"><li>PostgreSQL</li><li>ChromaDB</li><li>Docker</li><li>Git / GitHub</li><li>Linux / Ubuntu</li><li>HPC</li><li>Local inference</li></ul></article>
+                </div>
+            </div>
+        </section>
+        <section class="section section-muted" id="about" aria-labelledby="about-title">
+            <div class="container about-grid">
+                <div class="about-copy reveal"><p class="eyebrow">Background</p><h2 id="about-title">Clinical rigor, applied to software.</h2><p>Before studying computer science, I trained and worked as a certified medical technologist. Laboratories and clinical research taught me that “mostly correct” is not enough when data affects real people.</p><p>Today I bring that mindset to software: inspect the failure modes, automate the repetitive work, preserve an audit trail, and measure whether the system actually improved.</p><p class="languages"><strong>Languages:</strong> English and Spanish (native/bilingual), French (full professional).</p></div>
+                <div class="education-card reveal"><p class="eyebrow">Education</p><article><span>Expected May 2028</span><h3>B.Sc., Computer Science (Artificial Intelligence)</h3><p>McGill University · Montréal</p><p>Minor in Entrepreneurship for Science Students</p></article><article><span>May 2022</span><h3>DEC, Biomedical Laboratory Technology</h3><p>Dawson College · Montréal</p></article></div>
+            </div>
+        </section>
+        <section class="section" id="contact" aria-labelledby="contact-title">
+            <div class="container"><div class="contact-panel reveal"><p class="eyebrow">Summer 2027</p><h2 id="contact-title">Let’s talk about useful, reliable systems.</h2><p>I’m exploring internships in applied AI, machine learning and data engineering, backend systems, and adjacent software roles.</p><div class="contact-actions"><a class="button button-primary" href="mailto:cesaralexperalta@gmail.com">Email Cesar</a><a class="button button-secondary" href="https://www.linkedin.com/in/cesar-peralta-b710a91b1/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a></div></div></div>
+        </section>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Cesar Peralta. Built with passion & hard work.</p>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
+    <footer class="site-footer"><div class="container"><p>Designed and built by Cesar Peralta.</p><p>© <span id="current-year">2026</span> Cesar Peralta</p></div></footer>
 </body>
-
 </html>
